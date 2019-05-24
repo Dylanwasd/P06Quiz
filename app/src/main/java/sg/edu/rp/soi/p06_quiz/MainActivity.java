@@ -17,7 +17,7 @@ EditText num2;
 TextView operation;
 Button reset;
 TextView ans;
-Button btns;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +58,12 @@ Button btns;
         }
         return super.onContextItemSelected(item);
     }
+            reset.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            num1.setText("");
+            num2.setText("");
+        }
+    });
 
 }
