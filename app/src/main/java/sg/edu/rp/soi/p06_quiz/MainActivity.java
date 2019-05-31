@@ -29,6 +29,13 @@ TextView ans;
         reset = findViewById(R.id.btnReset);
         ans = findViewById(R.id.results);
         registerForContextMenu(operation);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num1.setText("");
+                num2.setText("");
+            }
+        });
 
 
     }
@@ -58,12 +65,6 @@ TextView ans;
         }
         return super.onContextItemSelected(item);
     }
-            reset.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            num1.setText("");
-            num2.setText("");
-        }
-    });
+
 
 }
